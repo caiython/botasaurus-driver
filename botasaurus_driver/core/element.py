@@ -1298,7 +1298,7 @@ class DictPosition(ContraDict):
 
 
     def to_viewport(self, scale=1):
-        return self._position.to_viewport(scale)
+        return _Position(self._position).to_viewport(scale)
 
     def __repr__(self):
         return str(self.to_dict())
